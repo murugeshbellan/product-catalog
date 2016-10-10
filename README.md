@@ -28,3 +28,4 @@ The certificate is a self signed certificate, accept the certificate error.
 - Additional form validation.
 - Unit Tests
 - logging
+- task runner / packaging
