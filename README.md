@@ -23,7 +23,7 @@ The certificate is a self signed certificate, accept the certificate error.
 - To load dummy data, type below URL in browser - https://localhost:8443/load-dummy-products
 
 
-#* Pending:
+#* Improvements:
 
 - Additional form validation.
 - Unit Tests
