@@ -17,6 +17,8 @@ https://localhost:8443/
 
 The certificate is a self signed certificate, accept the certificate error.
 
+To add a product - https://localhost:8443/add-product
+To view products - https://localhost:8443/view-products 
 
 To load dummy data, type below URL in browser
 
@@ -25,6 +27,6 @@ https://localhost:8443/load-dummy-products
 
 * Pending:
 
-- Additional form validation.
-- Unit Tests
-- logging
+Additional form validation.
+Unit Tests
+logging
