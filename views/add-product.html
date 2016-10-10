@@ -1,0 +1,87 @@
+{% extends 'layout.html' %}
+
+{% block title %}Add Product{% endblock %}
+
+{% block content %}
+{% spaceless %}
+
+<div class="container">
+
+    <div class="text-center">
+        <h1>Add Product</h1>
+        <p class="lead">Use this form to add a new Product</p>
+    </div>
+
+    <div id="add-product_status-error" class="alert alert-danger">
+        <p>Error submitting form. Please try again.</p>
+    </div>
+
+    <div id="add-product_status-success" class="alert alert-success">
+        <p>Product added successfully.</p>
+    </div>
+
+    <form id="frmAddProduct" class="form-vertical" action="">
+        <fieldset>
+
+            <legend>Enter Product Details:</legend>
+            <input type="hidden" name="_csrf" value="{{csrfToken}}">
+            
+            <div class="form-group">
+                <label for="productName">Name: *</label>
+                <input class="form-control" type="text" name="productName" maxlength="100" id="productName">
+            </div>
+
+            <div class="form-group">
+                <label for="image">Image (URL): *</label>
+                <input class="form-control" type="url" placeholder="http://example.com/images/image.png" name="image" maxlength="100" id="image">
+            </div>
+
+            <div class="form-group">
+                <label for="description">Description: *</label>
+                <textarea class="form-control" type="text" name="description" maxlength="200" id="description"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="colour">Colour: *</label>
+                <select class="form-control" name="colour" id="colorselector">
+                    <option value="">(Select Colour)</option>
+                    <option value="#000000">Black</option>
+                    <option value="#808080">Gray</option>
+                    <option value="#A9A9A9">DarkGray</option>
+                    <option value="#D3D3D3">LightGray</option>
+                    <option value="#FFFFFF">White</option>
+                    <option value="#7FFFD4">Aquamarine</option>
+                    <option value="#0000FF">Blue</option>
+                    <option value="#800080">Purple</option>
+                    <option value="#EE82EE">Violet</option>
+                    <option value="#FFC0CB">Pink</option>
+                    <option value="#006400">DarkGreen</option>
+                    <option value="#008000">Green</option>
+                    <option value="#FFFF00">Yellow</option>
+                    <option value="#FFA500">Orange</option>
+                    <option value="#FF0000">Red</option>
+                    <option value="#A52A2A">Brown</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="price">Price (£): *</label>
+                <input class="form-control" type="text" placeholder="19.99" name="price" maxlength="10" id="price">
+            </div>
+
+            <div class="form-group">
+                <label for="weight">Weight (Kg): *</label>
+                <input class="form-control" type="text" placeholder="25.5" name="weight" maxlength="10" id="weight">
+            </div>
+
+            <div class="form-group">
+                <button class="btn btn-primary" id="btnSaveProduct" name="btnSave" type="submit">Save</button>
+                <button class="btn btn-secondary" id="btnResetProduct" name="btnReset" type="button">Reset</button>
+            </div>
+
+        </fieldset>
+    </form>
+</div>
+
+{% endspaceless %}
+{% endblock %}

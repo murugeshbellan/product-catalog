@@ -1,0 +1,33 @@
+{% extends 'layout.html' %}
+
+{% block title %}View Products{% endblock %}
+
+{% block content %}
+{% spaceless %}
+
+<div class="container">
+
+    <div class="text-center">
+        <h1>View Products</h1>
+    </div>
+
+    <div class="container">
+        <div class="text-center">
+            {% for product in products %}
+            <div class="product-container col-md-4 col-sm-6 well well-sm">
+                <h3>{{ product.name }}</h3>
+                <div>£{{ product.price }}</div>
+                <div class="color-box">
+                    <span class="sr-only">{{ product.colour }}</span>
+                </div>
+                <p>{{ product.description }}</p>
+            </div>
+            {% endfor %}
+        </div>
+
+    </div>
+
+</div>
+
+{% endspaceless %}
+{% endblock %}

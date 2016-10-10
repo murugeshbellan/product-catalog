@@ -1,0 +1,42 @@
+body {
+    padding: 50px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+    color: #00B7FF;
+}
+
+#add-product_status-error, #add-product_status-success {
+    display: none;
+}
+
+.color-box {
+    display: block;
+    margin: 4px auto;
+    border: 1px solid #000;
+    width: 40px;
+    height: 25px;
+}
+
+.form-group .btn {
+    margin-top: 15px;
+    margin-right: 30px;
+    width: 100px;
+}
+
+.form-group #description {
+    height: 100px;
+}
+
+@media only screen and (min-width: 992px) {
+   .form-group {
+       margin-right: 25%;
+       margin-left: 25%;
+   }
+}
+
+.product-container {
+    height: 240px;
+    overflow: hidden;
+}

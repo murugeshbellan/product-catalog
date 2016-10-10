@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+
+{% if title %}
+{% block title %}{{title}}{% endblock %}
+{% endif %}
+
+{% block content %}
+{% spaceless %}
+<div class="container">
+
+    <div class="text-center">
+        <h1>Error occurred. Please try again.</h1>
+    </div>
+
+</div>
+{% endspaceless %}
+{% endblock %}
